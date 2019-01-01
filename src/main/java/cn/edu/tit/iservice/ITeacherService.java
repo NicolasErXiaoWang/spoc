@@ -1,11 +1,19 @@
 package cn.edu.tit.iservice;
 
+import java.util.HashMap;
 import java.util.List;
-import org.springframework.web.multipart.MultipartFile;
+
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Service;
+
 import cn.edu.tit.bean.Course;
 import cn.edu.tit.bean.Student;
 import cn.edu.tit.bean.VirtualClass;
+
 public interface ITeacherService {
+	
+	
+	
 	/**
 	 * @author wenli
 	 * @see cn.edu.tit.iservice.ITeacherService#createCourse(cn.edu.tit.bean.Course)
@@ -70,11 +78,6 @@ public interface ITeacherService {
 	 * @Param2(虚拟班班号)
 	 */
 	public void mapVirtualRealClass(String realClassNum,String virtualClassNUm);	//创建虚拟班和自然班映射模块
-
-	/**
-	 * @author LiMing
-	 * 添加教师信息,通过Excel表导入
-	 */
-	public String addTeacherInfo(MultipartFile file);	//创建虚拟班和自然班映射模块
+	
 
 }

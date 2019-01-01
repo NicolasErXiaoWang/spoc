@@ -1,6 +1,5 @@
 package cn.edu.tit.iservice.iserviceImpl;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,22 +35,16 @@ public class ResourceServiceImpl implements IResourceService {
 		}
 	}
 
-
 	@Override
-	public List<Resource> showResourceByClass(String virtualClassNum) {
-		List<String> resourceIdList = resourceDao.searchResourceIdByClass(virtualClassNum); // 获取课程相关resourceId
-		List<Resource> resourceList = new ArrayList<>();
-		for(String resourceId : resourceIdList){
-			Resource resource  = resourceDao.searchResourceById(resourceId); // 通过资源id查询相关资源
-			resourceList.add(resource);
-		}
-		return resourceList;
+	public void pubReasourceToLib(List<Resource> resourceList) {
+		// TODO Auto-generated method stub
+
 	}
 
 	@Override
-	public void synchroResourceOfLibAndClass(List<Resource> resourceList, String virtualClassNum) {
-		upLoadResource(resourceList); // 更新资源库
-		pubResourceToClass(resourceList, virtualClassNum); // 遍历资源id，发布到班级
+	public List<Resource> showResourceByClass(Integer courseId) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
