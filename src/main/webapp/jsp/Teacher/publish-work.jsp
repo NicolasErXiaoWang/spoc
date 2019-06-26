@@ -670,8 +670,6 @@
 				<input type="text" style="height: 30px;width: 185px" class="Wdate form-control" name="taskEndTime" id="taskEndTimeSelect" onclick="WdatePicker({skin:'whyGreen',dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="请输入时间"/> 
 				
 				</div>
-				
-
 				<!-- <div class="wui-content">
 					<div class="wui-area">
 						<h4 class="h4">选择年月日 时分秒</h4>
